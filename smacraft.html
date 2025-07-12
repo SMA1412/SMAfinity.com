@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMAfinity - SMACRAFT Game</title>
+    <link rel="icon" href="assets/images/favicon.png" type="image/png"> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo"><a href="index.html">SMAfinity</a></div>
+            <ul class="nav-links">
+                <li><a href="apps.html">Calendar & App</a></li>
+                <li><a href="smacraft.html">SMACRAFT Game</a></li>
+                <li><a href="smaroyalforce.html">SMA Royal Force Battle Reload</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="menu-icon"><i class="fas fa-bars"></i></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section-container hero-section-mini">
+            <h1>SMACRAFT: Your World, Your Rules.</h1>
+            <p>Dive into an infinite world of blocks! Build, explore, and conquer in your unique adventure.</p>
+            <a href="#" class="btn primary-btn" style="margin-top: 1rem;"><i class="fas fa-download btn-icon"></i> Download SMACRAFT</a>
+        </section>
+
+        <section class="section-container">
+            <h2>Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-compass feature-icon"></i>
+                    <h3>Limitless Exploration</h3>
+                    <p>Discover vast, procedurally generated worlds with unique biomes, hidden dungeons, and ancient secrets.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-hammer feature-icon"></i>
+                    <h3>Unleash Creativity</h3>
+                    <p>Build anything imaginable with advanced tools, ready-made structures, and custom blueprints in Creative Mode.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-user-friends feature-icon"></i>
+                    <h3>Dynamic Community</h3>
+                    <p>Interact with AI villagers, establish trade routes, and embark on quests. Play solo offline or join friends online!</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-sword feature-icon"></i>
+                    <h3>Epic Combat</h3>
+                    <p>Battle diverse mobs, face challenging AI bosses, and hone your combat skills in a vibrant ecosystem.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-container">
+            <h2>Game Modes</h2>
+            <div class="game-mode-grid">
+                <div class="game-mode-card">
+                    <i class="fas fa-mountain card-icon"></i>
+                    <h3>Survival</h3>
+                    <p>Gather resources, craft tools, build shelter, and survive against environmental challenges and hostile creatures.</p>
+                </div>
+                <div class="game-mode-card">
+                    <i class="fas fa-palette card-icon"></i>
+                    <h3>Creative</h3>
+                    <p>Unlimited resources and freedom to build without constraints. Design your masterpieces with advanced tools.</p>
+                </div>
+                <div class="game-mode-card">
+                    <i class="fas fa-fist-raised card-icon"></i>
+                    <h3>Battle</h3>
+                    <p>Engage in fast-paced combat scenarios against AI opponents or other players. Master unique abilities and arenas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-container">
+            <h2>Screenshots & Trailer</h2>
+            <div class="gallery">
+                <img src="assets/images/smacraft-ss1.png" alt="SMACRAFT Screenshot 1" class="gallery-img">
+                <img src="assets/images/smacraft-ss2.png" alt="SMACRAFT Screenshot 2" class="gallery-img">
+                <img src="assets/images/smacraft-ss3.png" alt="SMACRAFT Screenshot 3" class="gallery-img">
+            </div>
+            <div class="video-container" style="margin-top: 2rem;">
+                <iframe width="800" height="450" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=abcdefghijk" title="SMACRAFT Official Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="section-container">
+            <h2>System Requirements</h2>
+            <p>Minimum:</p>
+            <ul>
+                <li>OS: Windows 7/8/10</li>
+                <li>Processor: Intel Pentium (2007) or equivalent</li>
+                <li>RAM: 2 GB</li>
+                <li>Graphics: Integrated Graphics</li>
+                <li>Storage: 500 MB available space</li>
+            </ul>
+            <p>Recommended:</p>
+            <ul>
+                <li>OS: Windows 10 (64-bit)</li>
+                <li>Processor: Intel Core i5 or equivalent</li>
+                <li>RAM: 8 GB</li>
+                <li>Graphics: Dedicated GPU (NVIDIA GTX 750 or AMD Radeon R7 260X)</li>
+                <li>Storage: 2 GB available space</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 SMAfinity. All rights reserved.</p>
+    </footer>
+
+    <div class="chatbot-bubble" id="chatbot-bubble">
+        <i class="fas fa-comments"></i>
+    </div>
+    <div class="chatbot-window" id="chatbot-window">
+        <div class="chatbot-header">
+            <h3>SMAfinity Support Bot</h3>
+            <button class="close-btn" id="chatbot-close-btn"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chatbot-body">
+            <p class="bot-message">Hi there! How can I help you today?</p>
+        </div>
+        <div class="chatbot-footer">
+            <input type="text" placeholder="Type your message..." id="chatbot-input" disabled>
+            <button id="chatbot-send-btn" disabled><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

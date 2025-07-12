@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMAfinity - Look Simple. Live Smart.</title>
+    <link rel="icon" href="assets/images/favicon.png" type="image/png"> 
+    
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo"><a href="index.html">SMAfinity</a></div>
+            <ul class="nav-links">
+                <li><a href="apps.html">Calendar & App</a></li>
+                <li><a href="smacraft.html">SMACRAFT Game</a></li>
+                <li><a href="smaroyalforce.html">SMA Royal Force Battle Reload</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="menu-icon"><i class="fas fa-bars"></i></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <h1>Look Simple. Live Smart.</h1>
+            <div class="cta-buttons">
+                <a href="apps.html" class="btn primary-btn"><i class="fas fa-calendar-alt btn-icon"></i> Download Calendar & App</a>
+                <a href="smacraft.html" class="btn primary-btn"><i class="fas fa-gamepad btn-icon"></i> Play SMACRAFT Game</a>
+                <a href="smaroyalforce.html" class="btn primary-btn"><i class="fas fa-shield-alt btn-icon"></i> Play SMA ROYAL FORCE BATTLE RELOAD</a>
+            </div>
+        </section>
+
+        <section id="games-preview" class="section-container">
+            <h2>Our Top Projects</h2>
+            <div class="project-cards">
+                <div class="card">
+                    <i class="fas fa-calendar-alt card-icon"></i>
+                    <h3>Calendar & App</h3>
+                    <p>Privacy-focused scheduling and productivity tool.</p>
+                    <a href="apps.html" class="card-btn">Explore App</a>
+                </div>
+                <div class="card">
+                    <img src="assets/images/smacraft-icon.png" alt="SMACRAFT Icon" class="card-image-placeholder"> 
+                    <h3>SMACRAFT</h3>
+                    <p>Survival Creative Game. Build, explore, battle!</p>
+                    <a href="smacraft.html" class="card-btn">Play SMACRAFT</a>
+                </div>
+                <div class="card">
+                    <i class="fas fa-shield-alt card-icon"></i>
+                    <h3>SMA Royal Force</h3>
+                    <p>Experience intense battle action. Battle Reload!</p>
+                    <a href="smaroyalforce.html" class="card-btn">Join Force Battle</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="ai-section" class="section-container">
+            <h2>AI Section</h2>
+            <div class="ai-buttons">
+                <a href="apps.html" class="btn secondary-btn">Apps</a>
+                <a href="games.html" class="btn secondary-btn">Games</a>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </section>
+
+        <section id="projects-section" class="section-container">
+            <h2>Our Projects</h2>
+            <p>Stay tuned for more exciting ventures from SMAfinity!</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 SMAfinity. All rights reserved.</p>
+    </footer>
+
+    <div class="chatbot-bubble" id="chatbot-bubble">
+        <i class="fas fa-comments"></i>
+    </div>
+    <div class="chatbot-window" id="chatbot-window">
+        <div class="chatbot-header">
+            <h3>SMAfinity Support Bot</h3>
+            <button class="close-btn" id="chatbot-close-btn"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chatbot-body">
+            <p class="bot-message">Hi there! How can I help you today?</p>
+            </div>
+        <div class="chatbot-footer">
+            <input type="text" placeholder="Type your message..." id="chatbot-input" disabled>
+            <button id="chatbot-send-btn" disabled><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

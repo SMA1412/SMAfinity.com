@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMAfinity - Contact Us</title>
+    <link rel="icon" href="assets/images/favicon.png" type="image/png"> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo"><a href="index.html">SMAfinity</a></div>
+            <ul class="nav-links">
+                <li><a href="apps.html">Calendar & App</a></li>
+                <li><a href="smacraft.html">SMACRAFT Game</a></li>
+                <li><a href="smaroyalforce.html">SMA Royal Force Battle Reload</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <div class="menu-icon"><i class="fas fa-bars"></i></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section-container hero-section-mini">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you! Reach out for support, feedback, or collaboration.</p>
+        </section>
+
+        <section class="section-container contact-info">
+            <h2>Get In Touch</h2>
+            <p><i class="fas fa-envelope contact-icon"></i> Email: <a href="mailto:support@smafinity.com">support@smafinity.com</a></p>
+            <p><i class="fas fa-twitter contact-icon"></i> Twitter: <a href="https://twitter.com/SMAfinity" target="_blank">@SMAfinity</a></p>
+            <p><i class="fab fa-discord contact-icon"></i> Discord: <a href="#" target="_blank">Join our Discord Server</a></p>
+            <p class="contact-note">For game support, please visit our specific game pages or use the chatbot!</p>
+        </section>
+
+        </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 SMAfinity. All rights reserved.</p>
+    </footer>
+
+    <div class="chatbot-bubble" id="chatbot-bubble">
+        <i class="fas fa-comments"></i>
+    </div>
+    <div class="chatbot-window" id="chatbot-window">
+        <div class="chatbot-header">
+            <h3>SMAfinity Support Bot</h3>
+            <button class="close-btn" id="chatbot-close-btn"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chatbot-body">
+            <p class="bot-message">Hi there! How can I help you today?</p>
+        </div>
+        <div class="chatbot-footer">
+            <input type="text" placeholder="Type your message..." id="chatbot-input" disabled>
+            <button id="chatbot-send-btn" disabled><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
