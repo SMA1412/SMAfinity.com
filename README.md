@@ -4,9 +4,9 @@ Welcome to the official web store and landing page for **SMAfinity**! This websi
 
 Our mission is simple: **Look Simple. Live Smart.** We aim to provide seamless digital experiences that enhance your daily life and entertainment, with a strong focus on privacy and user experience.
 
----
 
-## 🚀 Key Features of the Website
+
+##  Key Features of the Website
 
 * **Modern & Responsive Design:** A clean, dark-themed interface that works well on all devices (desktop, tablet, mobile).
 * **Intuitive Navigation:** Easy access to different sections of our platform.
@@ -19,9 +19,9 @@ Our mission is simple: **Look Simple. Live Smart.** We aim to provide seamless d
 * **Interactive Chatbot UI:** A placeholder for future AI-powered support to assist users. (Note: Currently a UI element; AI functionality will be integrated in future phases.)
 * **Search Functionality:** An integrated search bar for easy content discovery.
 
----
 
-## 🛠️ Technologies Used
+
+##  Technologies Used
 
 * **HTML5:** For the core structure of the web pages.
 * **CSS3:** For styling, including responsive design and the dark theme.
@@ -29,15 +29,15 @@ Our mission is simple: **Look Simple. Live Smart.** We aim to provide seamless d
 * **Google Fonts:** For modern and appealing typography (`Poppins`).
 * **Font Awesome:** For scalable vector icons.
 
----
 
-## 🌐 Deployment
+
+##  Deployment
 
 This website is automatically deployed using **Netlify**, ensuring continuous delivery from our GitHub repository.
 
----
 
-## 🚀 Getting Started (For Developers)
+
+##  Getting Started (For Developers)
 
 To set up this project locally:
 
@@ -51,9 +51,9 @@ To set up this project locally:
     ```
 3.  **Open `index.html`:** Simply open the `index.html` file in your preferred web browser to view the website. All linked pages will work directly.
 
----
 
-## 🔮 Future Plans
+
+##  Future Plans
 
 We are actively developing our core products:
 
@@ -64,17 +64,19 @@ We are actively developing our core products:
 
 Stay tuned for more updates!
 
----
 
-## 📞 Contact Us
+
+##  Contact Us
 
 For support, feedback, or business inquiries, please visit our [Contact Us page](https://smafinity.com/contact.html) or reach out to us at `support@smafinity.com`.
 
----
 
-## 📜 License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-(Note: You would need to create a `LICENSE.md` file in your repo with the MIT license text if you choose this.)
+##  License
 
----
+This project is licensed under the **GNU General Public License v3.0**.
+You can find the full text of the license in the [LICENSE](LICENSE) file.
+
+
+
+**Copyright © 2025 SMAfinity**
