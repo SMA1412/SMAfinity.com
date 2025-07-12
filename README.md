@@ -1,1 +1,0 @@
-# SMAfinity.com
