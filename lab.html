@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="labPageTitle">SMAfinity - AI Lab</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dark-theme">
+    <header class="navbar">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="assets/images/smafinity_logo.png" alt="SMAfinity Logo" class="site-logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" data-translate="navHome">Home</a></li>
+                    <li><a href="games.html" data-translate="navGames">Games</a></li>
+                    <li><a href="apps.html" data-translate="navApps">Apps</a></li>
+                    <li><a href="lab.html" data-translate="navLab">Lab</a></li>
+                    <li><a href="contact.html" data-translate="navContact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="settings-controls">
+                <select id="language-switcher" class="select-control">
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी</option>
+                </select>
+                <button id="theme-switcher" class="theme-btn">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon" style="display: none;"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="lab-hero" class="hero-section small-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 data-translate="labHeroHeading">The SMAfinity AI Lab</h2>
+                    <p data-translate="labHeroSlogan">Unleash the power of AI to innovate and manage your digital future.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="lab-access" class="content-section">
+            <div class="container">
+                <h2 data-translate="labSectionTitle">Secure Access Required</h2>
+                <p class="section-description" data-translate="labSectionDesc">This area is restricted. Please enter your credentials to access the SMAfinity AI Control Panel.</p>
+
+                <div id="lab-access-screen">
+                    <p data-translate="labAccessPrompt">Welcome, Initiating Secure Lab Protocol...</p>
+                    <div class="password-input-container">
+                        <input type="password" id="passwordInput" placeholder=" " class="hidden-input" autocomplete="off" autofocus>
+                        <div id="visualKeyboard" class="visual-keyboard"></div>
+                        <div id="passwordDisplay" class="password-display"></div>
+                    </div>
+                    <div id="error-message" class="error-message hidden" data-translate="labAccessError">Access Denied. Please check credentials.</div>
+                </div>
+
+                <div id="lab-ai-interface" class="hidden">
+                    <h2 data-translate="aiInterfaceTitle">Welcome to SMAfinity AI Control Panel</h2>
+                    <p data-translate="aiInterfaceDesc">This is where you can interact with SMAfinity AI to update your games and apps.</p>
+                    <div class="ai-controls">
+                        <input type="text" id="aiCommandInput" placeholder="Enter AI command (e.g., 'add new enemy boss in SMACRAFT level 3')" data-translate-placeholder="aiCommandPlaceholder">
+                        <button id="aiSendCommand" data-translate="btnExecuteCommand">Execute Command</button>
+                        <button id="aiUndoBtn"><i class="fas fa-undo"></i> <span data-translate="btnUndo">Undo</span></button>
+                        <button id="aiRedoBtn"><i class="fas fa-redo"></i> <span data-translate="btnRedo">Redo</span></button>
+                    </div>
+                    <div class="ai-output">
+                        <pre id="aiOutputConsole" data-translate="aiConsoleReady">SMAfinity AI Console Ready. Awaiting commands...</pre>
+                    </div>
+                    <div class="asset-management">
+                        <h3 data-translate="assetManagerTitle">Asset Manager</h3>
+                        <input type="file" id="assetUploadInput" multiple>
+                        <button id="uploadAssetsBtn" data-translate="btnUploadAssets">Upload Assets</button>
+                        <div id="assetPreview" data-translate="assetPreviewPlaceholder">Uploaded assets will appear here...</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p data-translate="footerCopyright">&copy; 2025 SMAfinity. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/smafinity/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@SMAfinity" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="chatbot-widget" class="chatbot-closed">
+        <div class="chatbot-header" onclick="toggleChatbot()">
+            <span data-translate="chatbotHeader">SMAfinity Bot</span>
+            <i class="fas fa-comment-dots"></i>
+        </div>
+        <div class="chatbot-body">
+            <div id="chatbot-messages"></div>
+            <input type="text" id="chatbot-input" placeholder="Type your message..." data-translate-placeholder="chatbotPlaceholder">
+            <button id="chatbot-send-btn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/smafinity-ai.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+                                                                                                                       </html>
+  
