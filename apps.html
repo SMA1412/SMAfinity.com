@@ -3,93 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMAfinity - Our Apps</title>
-    <link rel="icon" href="assets/images/favicon.png" type="image/png"> 
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title data-translate="appsPageTitle">SMAfinity - Apps</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
-    <header class="header">
-        <nav class="navbar">
-            <div class="logo"><a href="index.html">SMAfinity</a></div>
-            <ul class="nav-links">
-                <li><a href="apps.html">Calendar & App</a></li>
-                <li><a href="smacraft.html">SMACRAFT Game</a></li>
-                <li><a href="smaroyalforce.html">SMA Royal Force Battle Reload</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-            <div class="menu-icon"><i class="fas fa-bars"></i></div>
-        </nav>
+<body class="dark-theme">
+    <header class="navbar">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="assets/images/smafinity_logo.png" alt="SMAfinity Logo" class="site-logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" data-translate="navHome">Home</a></li>
+                    <li><a href="games.html" data-translate="navGames">Games</a></li>
+                    <li><a href="apps.html" data-translate="navApps">Apps</a></li>
+                    <li><a href="lab.html" data-translate="navLab">Lab</a></li>
+                    <li><a href="contact.html" data-translate="navContact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="settings-controls">
+                <select id="language-switcher" class="select-control">
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी</option>
+                </select>
+                <button id="theme-switcher" class="theme-btn">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon" style="display: none;"></i>
+                </button>
+            </div>
+        </div>
     </header>
 
     <main>
-        <section class="section-container hero-section-mini">
-            <h1>Our Apps: Innovating Solutions.</h1>
-            <p>Discover our range of applications designed to simplify and enhance your daily life.</p>
-            <a href="#" class="btn primary-btn" style="margin-top: 1rem;"><i class="fas fa-download btn-icon"></i> Download Apps</a>
-        </section>
-
-        <section class="section-container">
-            <h2>Calendar & App: Your Privacy. Your Schedule.</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <i class="fas fa-lock feature-icon"></i>
-                    <h3>Privacy-Focused</h3>
-                    <p>Your data remains yours. Our app is built with privacy at its core, ensuring your information is secure.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-calendar-alt feature-icon"></i>
-                    <h3>Smart Scheduling</h3>
-                    <p>Effortlessly manage your events, appointments, and tasks with an intuitive and powerful calendar interface.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-sync-alt feature-icon"></i>
-                    <h3>Seamless Sync</h3>
-                    <p>Keep your schedule consistent across all your devices with reliable and secure synchronization.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-bell feature-icon"></i>
-                    <h3>Customizable Reminders</h3>
-                    <p>Set personalized reminders and notifications so you never miss an important event.</p>
+        <section id="apps-hero" class="hero-section small-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 data-translate="appsHeroHeading">Our Innovative Apps</h2>
+                    <p data-translate="appsHeroSlogan">Smart solutions to simplify your daily life and boost productivity.</p>
                 </div>
             </div>
         </section>
 
-        <section class="section-container">
-            <h2>App Screenshots</h2>
-            <div class="gallery">
-                <img src="assets/images/app-ss1.png" alt="Calendar App Screenshot 1" class="gallery-img">
-                <img src="assets/images/app-ss2.png" alt="Calendar App Screenshot 2" class="gallery-img">
-                <img src="assets/images/app-ss3.png" alt="Calendar App Screenshot 3" class="gallery-img">
+        <section id="app-list" class="content-section">
+            <div class="container">
+                <h2 data-translate="appsSectionTitle">Featured Applications</h2>
+                <p class="section-description" data-translate="appsSectionDesc">Discover our powerful and user-friendly apps, designed for modern needs.</p>
+
+                <div class="app-grid">
+                    <div class="app-card" data-app-id="calendar-pro">
+                        <img src="assets/images/calendar_pro_thumb.jpg" alt="Calendar ß Pro Thumbnail">
+                        <h3 data-translate="calendarProTitle">Calendar β Pro</h3>
+                        <p data-translate="calendarProDesc">Your ultimate productivity companion. Organize your schedule, manage tasks, and set reminders with advanced AI features. Syncs across all devices!</p>
+                        <div class="app-actions">
+                            <button class="btn small-btn download-btn" data-app-id="calendar-pro-download" data-translate="btnDownload">Download</button>
+                            <button class="btn small-btn view-details-btn" data-app-id="calendar-pro" data-translate="btnViewDetails">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="app-card" data-app-id="calendar-plus">
+                        <img src="assets/images/calendar_plus_thumb.jpg" alt="Calendar ß Plus Thumbnail">
+                        <h3 data-translate="calendarPlusTitle">Calendar β Plus</h3>
+                        <p data-translate="calendarPlusDesc">A streamlined, elegant calendar app for daily planning. Easy to use, visually appealing, and essential for keeping track of your appointments.</p>
+                        <div class="app-actions">
+                            <button class="btn small-btn download-btn" data-app-id="calendar-plus-download" data-translate="btnDownload">Download</button>
+                            <button class="btn small-btn view-details-btn" data-app-id="calendar-plus" data-translate="btnViewDetails">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="app-card placeholder-card">
+                        <i class="fas fa-plus-circle"></i>
+                        <h3 data-translate="moreAppsTitle">More Apps On The Horizon!</h3>
+                        <p data-translate="moreAppsDesc">We're building smart solutions for tomorrow's challenges, all managed by SMAfinity AI.</p>
+                    </div>
+                </div>
             </div>
         </section>
-
     </main>
 
     <footer class="footer">
-        <p>&copy; 2025 SMAfinity. All rights reserved.</p>
+        <div class="container">
+            <p data-translate="footerCopyright">&copy; 2025 SMAfinity. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/smafinity/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@SMAfinity" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
     </footer>
 
-    <div class="chatbot-bubble" id="chatbot-bubble">
-        <i class="fas fa-comments"></i>
-    </div>
-    <div class="chatbot-window" id="chatbot-window">
-        <div class="chatbot-header">
-            <h3>SMAfinity Support Bot</h3>
-            <button class="close-btn" id="chatbot-close-btn"><i class="fas fa-times"></i></button>
+    <div id="chatbot-widget" class="chatbot-closed">
+        <div class="chatbot-header" onclick="toggleChatbot()">
+            <span data-translate="chatbotHeader">SMAfinity Bot</span>
+            <i class="fas fa-comment-dots"></i>
         </div>
         <div class="chatbot-body">
-            <p class="bot-message">Hi there! How can I help you today?</p>
-        </div>
-        <div class="chatbot-footer">
-            <input type="text" placeholder="Type your message..." id="chatbot-input" disabled>
-            <button id="chatbot-send-btn" disabled><i class="fas fa-paper-plane"></i></button>
+            <div id="chatbot-messages"></div>
+            <input type="text" id="chatbot-input" placeholder="Type your message..." data-translate-placeholder="chatbotPlaceholder">
+            <button id="chatbot-send-btn"><i class="fas fa-paper-plane"></i></button>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <div id="appDetailsModal" class="modal">
+        <div class="modal-content large-modal">
+            <span class="close-button">&times;</span>
+            <div class="modal-body">
+                <h2 id="appDetailsTitle" data-translate="appDetailsTitleDefault">App Title</h2>
+                <div class="app-media-carousel">
+                    <img id="appDetailsMainImage" src="" alt="App Main Image">
+                    <div class="carousel-nav">
+                        <img class="carousel-thumb active" src="" alt="Thumbnail 1">
+                        <img class="carousel-thumb" src="" alt="Thumbnail 2">
+                        <img class="carousel-thumb" src="" alt="Thumbnail 3">
+                        </div>
+                </div>
+                <p id="appDetailsDescription" class="modal-description" data-translate="appDetailsDescriptionDefault">Full description of the app.</p>
+                <div class="modal-actions">
+                    <a id="appDetailsDownloadBtn" href="#" class="btn primary-btn" data-translate="btnDownloadNow">Download Now</a>
+                    <a id="appDetailsTrailerBtn" href="#" target="_blank" class="btn secondary-btn" data-translate="btnWatchTrailer">Watch Trailer</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/theme.js"></script>
+    <script>
+        // App Data (In a real app, this would come from a database/API)
+        const appsData = {
+            "calendar-pro": {
+                title: { en: "Calendar β Pro", hi: "कैलेंडर β प्रो" },
+                description: {
+                    en: "Calendar β Pro is designed for power users who demand precision and control over their time. It offers advanced features like AI-powered event scheduling, smart reminders, deep integration with other productivity tools, and comprehensive analytics of your time usage. Customize every aspect of your calendar, collaborate seamlessly, and achieve peak productivity with ease.",
+                    hi: "कैलेंडर β प्रो उन पावर उपयोगकर्ताओं के लिए डिज़ाइन किया गया है जो अपने समय पर सटीक नियंत्रण चाहते हैं। यह एआई-संचालित इवेंट शेड्यूलिंग, स्मार्ट रिमाइंडर, अन्य उत्पादकता उपकरणों के साथ गहरा एकीकरण, और आपके समय उपयोग के व्यापक विश्लेषण जैसी उन्नत सुविधाएँ प्रदान करता है। अपने कैलेंडर के हर पहलू को अनुकूलित करें, निर्बाध रूप से सहयोग करें, और आसानी से अधिकतम उत्पादकता प्राप्त करें।"
+                },
+                images: [
+                    "assets/images/calendar_pro_thumb.jpg",
+                    "https://via.placeholder.com/800x450/00e0ff/0a192f?text=Calendar+Pro+Screenshot+1",
+                    "https://via.placeholder.com/800x450/00e0ff/0a192f?text=Calendar+Pro+Screenshot+2"
+                ],
+                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ?si=l3iH01j3-R2L8j5Z", // Placeholder
+                download: "#" // Placeholder
+            },
+            "calendar-plus": {
+                title: { en: "Calendar β Plus", hi: "कैलेंडर β प्लस" },
+                description: {
+                    en: "Calendar β Plus is your simple, elegant, and effective daily planner. Focused on essential features, it helps you effortlessly manage appointments, set quick reminders, and view your schedule at a glance. Its intuitive interface and beautiful design make daily organization a joy, ensuring you never miss an important event. Perfect for those who prefer clarity and simplicity.",
+                    hi: "कैलेंडर β प्लस आपका सरल, सुरुचिपूर्ण और प्रभावी दैनिक योजनाकार है। आवश्यक सुविधाओं पर केंद्रित, यह आपको आसानी से नियुक्तियों का प्रबंधन करने, त्वरित रिमाइंडर सेट करने और अपनी अनुसूची को एक नज़र में देखने में मदद करता है। इसका सहज ज्ञान युक्त इंटरफ़ेस और सुंदर डिज़ाइन दैनिक संगठन को एक आनंदमय बनाता है, यह सुनिश्चित करता है कि आप कभी भी कोई महत्वपूर्ण घटना न चूकें। उन लोगों के लिए बिल्कुल सही जो स्पष्टता और सरलता पसंद करते हैं।"
+                },
+                images: [
+                    "assets/images/calendar_plus_thumb.jpg",
+                    "https://via.placeholder.com/800x450/64ffda/0a192f?text=Calendar+Plus+Screenshot+1",
+                    "https://via.placeholder.com/800x450/64ffda/0a192f?text=Calendar+Plus+Screenshot+2"
+                ],
+                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ?si=l3iH01j3-R2L8j5Z", // Placeholder
+                download: "#" // Placeholder
+            }
+        };
+
+        const appDetailsModal = document.getElementById('appDetailsModal');
+        const appDetailsTitle = document.getElementById('appDetailsTitle');
+        const appDetailsMainImage = document.getElementById('appDetailsMainImage');
+        const appDetailsDescription = document.getElementById('appDetailsDescription');
+        const appDetailsDownloadBtn = document.getElementById('appDetailsDownloadBtn');
+        const appDetailsTrailerBtn = document.getElementById('appDetailsTrailerBtn');
+        const appCarouselNav = document.querySelector('.app-media-carousel .carousel-nav');
+        const closeAppButton = appDetailsModal.querySelector('.close-button');
+
+        document.querySelectorAll('.view-details-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const appId = button.dataset.appId;
+                const app = appsData[appId];
+                if (app) {
+                    const currentLang = localStorage.getItem('selectedLanguage') || 'en';
+
+                    appDetailsTitle.textContent = app.title[currentLang];
+                    appDetailsDescription.textContent = app.description[currentLang];
+                    appDetailsDownloadBtn.href = app.download;
+                    appDetailsTrailerBtn.href = app.trailer;
+
+                    // Populate carousel
+                    appCarouselNav.innerHTML = ''; // Clear previous thumbnails
+                    app.images.forEach((imgSrc, index) => {
+                        const thumb = document.createElement('img');
+                        thumb.classList.add('carousel-thumb');
+                        if (index === 0) {
+                            thumb.classList.add('active');
+                            appDetailsMainImage.src = imgSrc; // Set initial main image
+                        }
+                        thumb.src = imgSrc;
+                        thumb.alt = `Screenshot ${index + 1}`;
+                        thumb.addEventListener('click', () => {
+                            appDetailsMainImage.src = imgSrc;
+                            appCarouselNav.querySelectorAll('.carousel-thumb').forEach(t => t.classList.remove('active'));
+                            thumb.classList.add('active');
+                        });
+                        appCarouselNav.appendChild(thumb);
+                    });
+
+                    appDetailsModal.style.display = 'flex'; // Show modal
+                }
+            });
+        });
+
+        closeAppButton.addEventListener('click', () => {
+            appDetailsModal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === appDetailsModal) {
+                appDetailsModal.style.display = 'none';
+            }
+        });
+
+        // Handle download buttons
+        document.querySelectorAll('.download-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault(); // Prevent default link behavior if href is '#'
+                const appId = button.dataset.appId.replace('-download', '');
+                const app = appsData[appId];
+                if (app && app.download !== '#') {
+                    // In a real scenario, initiate download here
+                    alert(`Downloading ${app.title[localStorage.getItem('selectedLanguage') || 'en']}... (Simulation)`);
+                    window.open(app.download, '_blank'); // Open download link
+                } else {
+                    alert(`Download for ${app.title[localStorage.getItem('selectedLanguage') || 'en']} is not available yet. Coming Soon!`);
+                }
+            });
+        });
+    </script>
 </body>
-</html>
+                        </html>
+                            
