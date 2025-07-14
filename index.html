@@ -3,27 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMAfinity - Advanced Tech Lab</title>
+    <title>SMAfinity - Innovating Future Tech</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
+<body class="theme-dark">
     <header class="navbar">
         <div class="container">
             <div class="logo-container">
-                <a href="#home">
+                <a href="index.html">
                     <img src="assets/images/smafinity_logo.png" alt="SMAfinity Logo" class="site-logo">
                 </a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#games">Games</a></li>
-                    <li><a href="#apps">Apps</a></li>
-                    <li><a href="#lab-entry">Lab</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="games.html">Games</a></li>
+                    <li><a href="apps.html">Apps</a></li>
+                    <li><a href="#lab-entry">Lab</a></li> <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
+            <div class="nav-controls">
+                <select id="language-switcher">
+                    <option value="en">English</option>
+                    <option value="hi">Hindi</option>
+                </select>
+                <button id="theme-switcher" class="icon-btn" aria-label="Toggle Theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
         </div>
     </header>
 
@@ -31,85 +40,45 @@
         <section id="home" class="hero-section">
             <div class="container">
                 <div class="hero-content">
-                    <h2>Welcome to SMAfinity Tech Lab</h2>
-                    <p>Innovating the future of gaming and applications with cutting-edge AI.</p>
-                    <a href="#lab-entry" class="btn primary-btn">Enter The Lab</a>
-                    <a href="#games" class="btn secondary-btn">Explore Games</a>
+                    <h2 data-lang-key="home_slogan1">Look Simple, Live Smart.</h2>
+                    <p data-lang-key="home_slogan2">Empowering your world with next-generation AI and immersive experiences.</p>
+                    <p data-lang-key="home_slogan3">The future is now, crafted by SMAfinity.</p>
+                    <a href="games.html" class="btn primary-btn" data-lang-key="btn_explore_games">Explore Our Games</a>
+                    <a href="apps.html" class="btn secondary-btn" data-lang-key="btn_discover_apps">Discover Our Apps</a>
                 </div>
             </div>
         </section>
 
-        <section id="games" class="content-section">
+        <section id="about" class="content-section">
             <div class="container">
-                <h2>Our Games</h2>
-                <p class="section-description">Dive into immersive experiences crafted with cutting-edge technology. Stay tuned for exciting new titles!</p>
-                <div class="game-grid">
-                    <div class="game-card">
-                        <img src="assets/images/game_placeholder_1.jpg" alt="Game Title 1 - Placeholder">
-                        <h3>Upcoming Title Alpha</h3>
-                        <p>A thrilling action-adventure with unique mechanics and AI-driven challenges. Coming Soon!</p>
-                        <div class="game-actions">
-                            <button class="btn small-btn" disabled><i class="fas fa-image"></i> Screenshots</button>
-                            <button class="btn small-btn" disabled><i class="fas fa-video"></i> Trailer</button>
-                            <button class="btn small-btn" disabled><i class="fas fa-download"></i> Download</button>
-                        </div>
+                <h2 data-lang-key="about_title">About SMAfinity</h2>
+                <p class="section-description" data-lang-key="about_desc1">At SMAfinity, we are pioneers in creating advanced, intelligent solutions that simplify your life and elevate your digital experience.</p>
+                <p class="section-description" data-lang-key="about_desc2">From groundbreaking games that challenge your mind to smart applications that optimize your day, we build the future, one innovation at a time.</p>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-brain"></i>
+                        <h3 data-lang-key="feature1_title">AI-Powered Innovation</h3>
+                        <p data-lang-key="feature1_desc">Leveraging cutting-edge artificial intelligence to deliver unparalleled performance and intelligent solutions.</p>
                     </div>
-                    <div class="game-card">
-                        <img src="assets/images/game_placeholder_2.jpg" alt="Game Title 2 - Placeholder">
-                        <h3>Project Nebula</h3>
-                        <p>Explore a vast sci-fi universe in this strategic simulation, powered by smart algorithms.</p>
-                        <div class="game-actions">
-                            <button class="btn small-btn" disabled><i class="fas fa-image"></i> Screenshots</button>
-                            <button class="btn small-btn" disabled><i class="fas fa-video"></i> Trailer</button>
-                            <button class="btn small-btn" disabled><i class="fas fa-download"></i> Download</button>
-                        </div>
+                    <div class="feature-card">
+                        <i class="fas fa-gamepad"></i>
+                        <h3 data-lang-key="feature2_title">Immersive Gaming</h3>
+                        <p data-lang-key="feature2_desc">Crafting captivating virtual worlds and engaging gameplay experiences for every enthusiast.</p>
                     </div>
-                    <div class="game-card placeholder-card">
-                        <i class="fas fa-plus-circle"></i>
-                        <h3>More Games Coming Soon!</h3>
-                        <p>Our lab is constantly brewing new ideas and worlds for you to explore. Ready to be updated by SMAfinity AI!</p>
+                    <div class="feature-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3 data-lang-key="feature3_title">Smart Applications</h3>
+                        <p data-lang-key="feature3_desc">Designing intuitive and powerful applications that integrate seamlessly into your daily routine.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="apps" class="content-section grey-bg">
+        <section id="lab-entry" class="content-section grey-bg">
             <div class="container">
-                <h2>Our Apps</h2>
-                <p class="section-description">Innovative applications designed to simplify your life and enhance your productivity. Stay tuned for new releases!</p>
-                <div class="app-grid">
-                    <div class="app-card">
-                        <img src="assets/images/app_placeholder_1.jpg" alt="App Title 1 - Placeholder">
-                        <h3>Utility X</h3>
-                        <p>A powerful tool to optimize your device performance with intelligent automation.</p>
-                        <div class="app-actions">
-                            <button class="btn small-btn" disabled><i class="fas fa-image"></i> Screenshots</button>
-                            <button class="btn small-btn" disabled><i class="fas fa-download"></i> Download</button>
-                        </div>
-                    </div>
-                    <div class="app-card">
-                        <img src="assets/images/app_placeholder_2.jpg" alt="App Title 2 - Placeholder">
-                        <h3>Creative Canvas</h3>
-                        <p>Unleash your creativity with this intuitive design app, featuring AI-assisted tools.</p>
-                        <div class="app-actions">
-                            <button class="btn small-btn" disabled><i class="fas fa-image"></i> Screenshots</button>
-                            <button class="btn small-btn" disabled><i class="fas fa-download"></i> Download</button>
-                        </div>
-                    </div>
-                    <div class="app-card placeholder-card">
-                        <i class="fas fa-plus-circle"></i>
-                        <h3>More Apps On The Horizon!</h3>
-                        <p>We're building smart solutions for tomorrow's challenges, all managed by SMAfinity AI.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="lab-entry" class="content-section">
-            <div class="container">
-                <h2>The SMAfinity AI Lab</h2>
-                <p class="section-description">Access the core of our innovation. This area is restricted and requires authentication. Only authorized personnel can enter.</p>
-                <button id="accessLabBtn" class="btn primary-btn">Access SMAfinity AI Lab</button>
+                <h2 data-lang-key="lab_title">The SMAfinity AI Lab</h2>
+                <p class="section-description" data-lang-key="lab_desc">Access the core of our innovation. This area is restricted and requires authentication.</p>
+                <button id="accessLabBtn" class="btn primary-btn" data-lang-key="btn_access_lab">Access SMAfinity AI Lab</button>
             </div>
         </section>
 
@@ -117,54 +86,56 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 SMAfinity. All rights reserved.</p>
+            <p>&copy; 2025 SMAfinity. <span data-lang-key="footer_rights">All rights reserved.</span></p>
             <div class="social-links">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/smafinity" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com/smafinity" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com/company/smafinity" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://instagram.com/smafinity" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com/smafinity" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
     </footer>
 
     <div id="chatbot-widget" class="chatbot-closed">
         <div class="chatbot-header" onclick="toggleChatbot()">
-            <span>SMAfinity Bot</span>
+            <span data-lang-key="chatbot_header">SMAfinity Bot</span>
             <i class="fas fa-comment-dots"></i>
         </div>
         <div class="chatbot-body">
             <div id="chatbot-messages"></div>
-            <input type="text" id="chatbot-input" placeholder="Type your message...">
-            <button id="chatbot-send-btn"><i class="fas fa-paper-plane"></i></button>
+            <input type="text" id="chatbot-input" placeholder="Type your message..." data-lang-key="chatbot_placeholder">
+            <button id="chatbot-send-btn" aria-label="Send Message"><i class="fas fa-paper-plane"></i></button>
         </div>
     </div>
 
     <div id="labModal" class="modal">
         <div class="modal-content">
-            <span class="close-button">&times;</span>
+            <span class="close-button" aria-label="Close Modal">&times;</span>
             <div id="lab-access-screen">
-                <p>Welcome, Initiating Secure Lab Protocol...</p>
+                <p data-lang-key="lab_modal_welcome">Welcome, Initiating Secure Lab Protocol...</p>
                 <div class="password-input-container">
                     <input type="password" id="passwordInput" placeholder=" " class="hidden-input" autocomplete="off" autofocus>
                     <div id="visualKeyboard" class="visual-keyboard"></div>
                 </div>
             </div>
             <div id="lab-ai-interface" class="hidden">
-                <h2>Welcome to SMAfinity AI Control Panel</h2>
-                <p>This is where you can interact with SMAfinity AI to update your games and apps.</p>
+                <h2 data-lang-key="ai_console_title">Welcome to SMAfinity AI Control Panel</h2>
+                <p data-lang-key="ai_console_desc">This is where you can interact with SMAfinity AI to update your games and apps.</p>
                 <div class="ai-controls">
-                    <input type="text" id="aiCommandInput" placeholder="Enter AI command (e.g., 'add new enemy boss in Level 3')">
-                    <button id="aiSendCommand">Execute Command</button>
-                    <button id="aiUndoBtn"><i class="fas fa-undo"></i> Undo</button>
-                    <button id="aiRedoBtn"><i class="fas fa-redo"></i> Redo</button>
+                    <input type="text" id="aiCommandInput" placeholder="Enter AI command (e.g., 'add new enemy boss in Level 3')" data-lang-key="ai_command_placeholder">
+                    <button id="aiSendCommand" data-lang-key="ai_btn_execute">Execute Command</button>
+                    <button id="aiUndoBtn" data-lang-key="ai_btn_undo"><i class="fas fa-undo"></i> Undo</button>
+                    <button id="aiRedoBtn" data-lang-key="ai_btn_redo"><i class="fas fa-redo"></i> Redo</button>
                 </div>
                 <div class="ai-output">
-                    <pre id="aiOutputConsole">SMAfinity AI Console Ready. Awaiting commands...</pre>
+                    <pre id="aiOutputConsole" data-lang-key="ai_console_ready">SMAfinity AI Console Ready. Awaiting commands...</pre>
                 </div>
                 <div class="asset-management">
-                    <h3>Asset Manager</h3>
+                    <h3 data-lang-key="asset_manager_title">Asset Manager</h3>
                     <input type="file" id="assetUploadInput" multiple>
-                    <button id="uploadAssetsBtn">Upload Assets</button>
-                    <div id="assetPreview">Uploaded assets will appear here...</div>
+                    <button id="uploadAssetsBtn" data-lang-key="asset_btn_upload">Upload Assets</button>
+                    <div id="assetPreview" data-lang-key="asset_preview_placeholder">Uploaded assets will appear here...</div>
                 </div>
             </div>
         </div>
