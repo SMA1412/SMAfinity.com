@@ -3,108 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMAfinity - Look Simple. Live Smart.</title>
-    
-    <meta name="description" content="SMAfinity.com is your ultimate hub for innovative digital experiences. Explore our cutting-edge games like SMACRAFT and SMA Royal Force Battle Reload, and discover our privacy-focused productivity apps. Look Simple. Live Smart.">
-    
-    <link rel="icon" href="assets/images/favicon.png" type="image/png"> 
-    
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+    <title>SMAfinity - Advanced Tech Lab</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
-    <header class="header">
-        <nav class="navbar">
-            <div class="logo"><a href="index.html">SMAfinity</a></div>
-            <ul class="nav-links">
-                <li><a href="apps.html">Calendar & App</a></li>
-                <li><a href="smacraft.html">SMACRAFT Game</a></li>
-                <li><a href="smaroyalforce.html">SMA Royal Force Battle Reload</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-            <div class="menu-icon"><i class="fas fa-bars"></i></div>
-        </nav>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo-container">
+                <a href="#home">
+                    <img src="assets/images/smafinity_logo.png" alt="SMAfinity Logo" class="site-logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#games">Games</a></li>
+                    <li><a href="#apps">Apps</a></li>
+                    <li><a href="#lab-entry">Lab</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section class="hero-section">
-            <h1>Look Simple. Live Smart.</h1>
-            <div class="cta-buttons">
-                <a href="apps.html" class="btn primary-btn"><i class="fas fa-calendar-alt btn-icon"></i> Download Calendar & App</a>
-                <a href="smacraft.html" class="btn primary-btn"><i class="fas fa-gamepad btn-icon"></i> Play SMACRAFT Game</a>
-                <a href="smaroyalforce.html" class="btn primary-btn"><i class="fas fa-shield-alt btn-icon"></i> Play SMA ROYAL FORCE BATTLE RELOAD</a>
-            </div>
-        </section>
-
-        <section id="games-preview" class="section-container">
-            <h2>Our Top Projects</h2>
-            <div class="project-cards">
-                <div class="card">
-                    <i class="fas fa-calendar-alt card-icon"></i>
-                    <h3>Calendar & App</h3>
-                    <p>Privacy-focused scheduling and productivity tool.</p>
-                    <a href="apps.html" class="card-btn">Explore App</a>
-                </div>
-                <div class="card">
-                    <img src="assets/images/smacraft-icon.png" alt="SMACRAFT Icon" class="card-image-placeholder"> 
-                    <h3>SMACRAFT</h3>
-                    <p>Survival Creative Game. Build, explore, battle!</p>
-                    <a href="smacraft.html" class="card-btn">Play SMACRAFT</a>
-                </div>
-                <div class="card">
-                    <i class="fas fa-shield-alt card-icon"></i>
-                    <h3>SMA Royal Force</h3>
-                    <p>Experience intense battle action. Battle Reload!</p>
-                    <a href="smaroyalforce.html" class="card-btn">Join Force Battle</a>
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Welcome to SMAfinity Tech Lab</h2>
+                    <p>Innovating the future of gaming and applications with cutting-edge AI.</p>
+                    <a href="#lab-entry" class="btn primary-btn">Enter The Lab</a>
+                    <a href="#games" class="btn secondary-btn">Explore Games</a>
                 </div>
             </div>
         </section>
 
-        <section id="ai-section" class="section-container">
-            <h2>AI Section</h2>
-            <div class="ai-buttons">
-                <a href="apps.html" class="btn secondary-btn">Apps</a>
-                <a href="games.html" class="btn secondary-btn">Games</a>
-            </div>
-            <div class="search-box">
-                <input type="text" placeholder="Search...">
-                <button><i class="fas fa-search"></i></button>
+        <section id="games" class="content-section">
+            <div class="container">
+                <h2>Our Games</h2>
+                <p class="section-description">Dive into immersive experiences crafted with cutting-edge technology. Stay tuned for exciting new titles!</p>
+                <div class="game-grid">
+                    <div class="game-card">
+                        <img src="assets/images/game_placeholder_1.jpg" alt="Game Title 1 - Placeholder">
+                        <h3>Upcoming Title Alpha</h3>
+                        <p>A thrilling action-adventure with unique mechanics and AI-driven challenges. Coming Soon!</p>
+                        <div class="game-actions">
+                            <button class="btn small-btn" disabled><i class="fas fa-image"></i> Screenshots</button>
+                            <button class="btn small-btn" disabled><i class="fas fa-video"></i> Trailer</button>
+                            <button class="btn small-btn" disabled><i class="fas fa-download"></i> Download</button>
+                        </div>
+                    </div>
+                    <div class="game-card">
+                        <img src="assets/images/game_placeholder_2.jpg" alt="Game Title 2 - Placeholder">
+                        <h3>Project Nebula</h3>
+                        <p>Explore a vast sci-fi universe in this strategic simulation, powered by smart algorithms.</p>
+                        <div class="game-actions">
+                            <button class="btn small-btn" disabled><i class="fas fa-image"></i> Screenshots</button>
+                            <button class="btn small-btn" disabled><i class="fas fa-video"></i> Trailer</button>
+                            <button class="btn small-btn" disabled><i class="fas fa-download"></i> Download</button>
+                        </div>
+                    </div>
+                    <div class="game-card placeholder-card">
+                        <i class="fas fa-plus-circle"></i>
+                        <h3>More Games Coming Soon!</h3>
+                        <p>Our lab is constantly brewing new ideas and worlds for you to explore. Ready to be updated by SMAfinity AI!</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="projects-section" class="section-container">
-            <h2>Our Projects</h2>
-            <p>Stay tuned for more exciting ventures from SMAfinity!</p>
+        <section id="apps" class="content-section grey-bg">
+            <div class="container">
+                <h2>Our Apps</h2>
+                <p class="section-description">Innovative applications designed to simplify your life and enhance your productivity. Stay tuned for new releases!</p>
+                <div class="app-grid">
+                    <div class="app-card">
+                        <img src="assets/images/app_placeholder_1.jpg" alt="App Title 1 - Placeholder">
+                        <h3>Utility X</h3>
+                        <p>A powerful tool to optimize your device performance with intelligent automation.</p>
+                        <div class="app-actions">
+                            <button class="btn small-btn" disabled><i class="fas fa-image"></i> Screenshots</button>
+                            <button class="btn small-btn" disabled><i class="fas fa-download"></i> Download</button>
+                        </div>
+                    </div>
+                    <div class="app-card">
+                        <img src="assets/images/app_placeholder_2.jpg" alt="App Title 2 - Placeholder">
+                        <h3>Creative Canvas</h3>
+                        <p>Unleash your creativity with this intuitive design app, featuring AI-assisted tools.</p>
+                        <div class="app-actions">
+                            <button class="btn small-btn" disabled><i class="fas fa-image"></i> Screenshots</button>
+                            <button class="btn small-btn" disabled><i class="fas fa-download"></i> Download</button>
+                        </div>
+                    </div>
+                    <div class="app-card placeholder-card">
+                        <i class="fas fa-plus-circle"></i>
+                        <h3>More Apps On The Horizon!</h3>
+                        <p>We're building smart solutions for tomorrow's challenges, all managed by SMAfinity AI.</p>
+                    </div>
+                </div>
+            </div>
         </section>
+
+        <section id="lab-entry" class="content-section">
+            <div class="container">
+                <h2>The SMAfinity AI Lab</h2>
+                <p class="section-description">Access the core of our innovation. This area is restricted and requires authentication. Only authorized personnel can enter.</p>
+                <button id="accessLabBtn" class="btn primary-btn">Access SMAfinity AI Lab</button>
+            </div>
+        </section>
+
     </main>
 
     <footer class="footer">
-        <p>&copy; 2025 SMAfinity. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 SMAfinity. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
     </footer>
 
-    <div class="chatbot-bubble" id="chatbot-bubble">
-        <i class="fas fa-comments"></i>
-    </div>
-    <div class="chatbot-window" id="chatbot-window">
-        <div class="chatbot-header">
-            <h3>SMAfinity Support Bot</h3>
-            <button class="close-btn" id="chatbot-close-btn"><i class="fas fa-times"></i></button>
+    <div id="chatbot-widget" class="chatbot-closed">
+        <div class="chatbot-header" onclick="toggleChatbot()">
+            <span>SMAfinity Bot</span>
+            <i class="fas fa-comment-dots"></i>
         </div>
         <div class="chatbot-body">
-            <p class="bot-message">Hi there! How can I help you today?</p>
-            </div>
-        <div class="chatbot-footer">
-            <input type="text" placeholder="Type your message..." id="chatbot-input" disabled>
-            <button id="chatbot-send-btn" disabled><i class="fas fa-paper-plane"></i></button>
+            <div id="chatbot-messages"></div>
+            <input type="text" id="chatbot-input" placeholder="Type your message...">
+            <button id="chatbot-send-btn"><i class="fas fa-paper-plane"></i></button>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <div id="labModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="lab-access-screen">
+                <p>Welcome, Initiating Secure Lab Protocol...</p>
+                <div class="password-input-container">
+                    <input type="password" id="passwordInput" placeholder=" " class="hidden-input" autocomplete="off" autofocus>
+                    <div id="visualKeyboard" class="visual-keyboard"></div>
+                </div>
+            </div>
+            <div id="lab-ai-interface" class="hidden">
+                <h2>Welcome to SMAfinity AI Control Panel</h2>
+                <p>This is where you can interact with SMAfinity AI to update your games and apps.</p>
+                <div class="ai-controls">
+                    <input type="text" id="aiCommandInput" placeholder="Enter AI command (e.g., 'add new enemy boss in Level 3')">
+                    <button id="aiSendCommand">Execute Command</button>
+                    <button id="aiUndoBtn"><i class="fas fa-undo"></i> Undo</button>
+                    <button id="aiRedoBtn"><i class="fas fa-redo"></i> Redo</button>
+                </div>
+                <div class="ai-output">
+                    <pre id="aiOutputConsole">SMAfinity AI Console Ready. Awaiting commands...</pre>
+                </div>
+                <div class="asset-management">
+                    <h3>Asset Manager</h3>
+                    <input type="file" id="assetUploadInput" multiple>
+                    <button id="uploadAssetsBtn">Upload Assets</button>
+                    <div id="assetPreview">Uploaded assets will appear here...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/smafinity-ai.js"></script>
 </body>
 </html>
