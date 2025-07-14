@@ -3,67 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMAfinity - Contact Us</title>
-    <link rel="icon" href="assets/images/favicon.png" type="image/png"> 
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title data-translate="contactPageTitle">SMAfinity - Contact</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
-    <header class="header">
-        <nav class="navbar">
-            <div class="logo"><a href="index.html">SMAfinity</a></div>
-            <ul class="nav-links">
-                <li><a href="apps.html">Calendar & App</a></li>
-                <li><a href="smacraft.html">SMACRAFT Game</a></li>
-                <li><a href="smaroyalforce.html">SMA Royal Force Battle Reload</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-            <div class="menu-icon"><i class="fas fa-bars"></i></div>
-        </nav>
+<body class="dark-theme">
+    <header class="navbar">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="assets/images/smafinity_logo.png" alt="SMAfinity Logo" class="site-logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" data-translate="navHome">Home</a></li>
+                    <li><a href="games.html" data-translate="navGames">Games</a></li>
+                    <li><a href="apps.html" data-translate="navApps">Apps</a></li>
+                    <li><a href="lab.html" data-translate="navLab">Lab</a></li>
+                    <li><a href="contact.html" data-translate="navContact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="settings-controls">
+                <select id="language-switcher" class="select-control">
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी</option>
+                </select>
+                <button id="theme-switcher" class="theme-btn">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon" style="display: none;"></i>
+                </button>
+            </div>
+        </div>
     </header>
 
     <main>
-        <section class="section-container hero-section-mini">
-            <h1>Contact Us</h1>
-            <p>We'd love to hear from you! Reach out for support, feedback, or collaboration.</p>
+        <section id="contact-hero" class="hero-section small-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 data-translate="contactHeroHeading">Get in Touch with SMAfinity</h2>
+                    <p data-translate="contactHeroSlogan">We'd love to hear from you!</p>
+                </div>
+            </div>
         </section>
 
-        <section class="section-container contact-info">
-            <h2>Get In Touch</h2>
-            <p><i class="fas fa-phone-alt contact-icon"></i> Phone: <a href="tel:+919391836713">+91 9391836713</a></p>
-            <p><i class="fas fa-envelope contact-icon"></i> Email: <a href="mailto:smafinity1412@gmail.com">smafinity1412@gmail.com</a></p>
-            <p><i class="fas fa-map-marker-alt contact-icon"></i> Address: Nizamabad, Telangana, India</p>
-            <p><i class="fab fa-youtube contact-icon"></i> YouTube: <a href="https://www.youtube.com/@smafinity" target="_blank">@SMAfinity</a></p>
-            <p><i class="fab fa-instagram contact-icon"></i> Instagram: <a href="https://www.instagram.com/smafinity" target="_blank">@smafinity</a></p>
-            <p class="contact-note">For game support, please visit our specific game pages or use the chatbot!</p>
-        </section>
+        <section id="contact-details" class="content-section">
+            <div class="container">
+                <h2 data-translate="contactSectionTitle">Contact Information</h2>
+                <p class="section-description" data-translate="contactSectionDesc">Reach out to us through the following channels. We are always happy to assist!</p>
 
-        </main>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3 data-translate="emailTitle">Email Us</h3>
+                        <p data-translate="emailDesc">For general inquiries and support.</p>
+                        <a href="mailto:smafinity1412@gmail.com" class="contact-link">smafinity1412@gmail.com</a>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h3 data-translate="phoneTitle">Call Us</h3>
+                        <p data-translate="phoneDesc">Available during business hours.</p>
+                        <a href="tel:+919391836713" class="contact-link">+91 939 1836 713</a>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-share-alt"></i>
+                        <h3 data-translate="socialTitle">Connect on Social</h3>
+                        <p data-translate="socialDesc">Follow us for latest updates and news.</p>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/smafinity/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/@SMAfinity" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+                            <a href="#" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
-        <p>© 2025 SMAfinity. All rights reserved.</p>
+        <div class="container">
+            <p data-translate="footerCopyright">&copy; 2025 SMAfinity. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/smafinity/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@SMAfinity" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
     </footer>
 
-    <div class="chatbot-bubble" id="chatbot-bubble">
-        <i class="fas fa-comments"></i>
-    </div>
-    <div class="chatbot-window" id="chatbot-window">
-        <div class="chatbot-header">
-            <h3>SMAfinity Support Bot</h3>
-            <button class="close-btn" id="chatbot-close-btn"><i class="fas fa-times"></i></button>
+    <div id="chatbot-widget" class="chatbot-closed">
+        <div class="chatbot-header" onclick="toggleChatbot()">
+            <span data-translate="chatbotHeader">SMAfinity Bot</span>
+            <i class="fas fa-comment-dots"></i>
         </div>
         <div class="chatbot-body">
-            <p class="bot-message">Hi there! How can I help you today?</p>
-        </div>
-        <div class="chatbot-footer">
-            <input type="text" placeholder="Type your message..." id="chatbot-input" disabled>
-            <button id="chatbot-send-btn" disabled><i class="fas fa-paper-plane"></i></button>
+            <div id="chatbot-messages"></div>
+            <input type="text" id="chatbot-input" placeholder="Type your message..." data-translate-placeholder="chatbotPlaceholder">
+            <button id="chatbot-send-btn"><i class="fas fa-paper-plane"></i></button>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/theme.js"></script>
 </body>
 </html>
