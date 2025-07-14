@@ -1,0 +1,809 @@
+/* Basic Resets & Global Styles */
+:root {
+    /* Dark Theme Variables */
+    --dark-primary-color: #00e0ff; /* Bright Blue/Cyan */
+    --dark-secondary-color: #8892b0; /* Greyish Blue */
+    --dark-accent-color: #64ffda; /* Greenish Cyan */
+    --dark-dark-bg: #0a192f; /* Very Dark Blue */
+    --dark-darker-bg: #040c18; /* Even darker */
+    --dark-light-text: #ccd6f6; /* Light gray text */
+    --dark-border-color: #233554; /* Darker blue border */
+    --dark-card-bg: #112240; /* Slightly lighter dark blue for cards */
+    --dark-hover-effect: #00b3cc; /* Darker primary for hover */
+
+    /* Light Theme Variables (will be applied via JS when .light-theme is active) */
+    --light-primary-color: #007bff; /* Standard Blue */
+    --light-secondary-color: #495057; /* Dark Grey */
+    --light-accent-color: #28a745; /* Green */
+    --light-dark-bg: #f8f9fa; /* Light Grey Background */
+    --light-darker-bg: #ffffff; /* White Background */
+    --light-light-text: #212529; /* Dark text */
+    --light-border-color: #dee2e6; /* Light border */
+    --light-card-bg: #f0f2f5; /* Light grey for cards */
+    --light-hover-effect: #0056b3; /* Darker blue for hover */
+
+    /* Generic variables that will be swapped by theme-switcher */
+    --primary-color: var(--dark-primary-color);
+    --secondary-color: var(--dark-secondary-color);
+    --accent-color: var(--dark-accent-color);
+    --dark-bg: var(--dark-dark-bg);
+    --darker-bg: var(--dark-darker-bg);
+    --light-text: var(--dark-light-text);
+    --border-color: var(--dark-border-color);
+    --card-bg: var(--dark-card-bg);
+    --hover-effect: var(--dark-hover-effect);
+    --transition-speed: 0.3s ease;
+}
+
+/* Light Theme overrides */
+body.light-theme {
+    --primary-color: var(--light-primary-color);
+    --secondary-color: var(--light-secondary-color);
+    --accent-color: var(--light-accent-color);
+    --dark-bg: var(--light-dark-bg);
+    --darker-bg: var(--light-darker-bg);
+    --light-text: var(--light-light-text);
+    --border-color: var(--light-border-color);
+    --card-bg: var(--light-card-bg);
+    --hover-effect: var(--light-hover-effect);
+    color: var(--light-text); /* Ensure text color changes */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--light-text);
+    background-color: var(--dark-bg);
+    overflow-x: hidden;
+    transition: background-color var(--transition-speed), color var(--transition-speed); /* Smooth theme transition */
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+a:hover {
+    color: var(--hover-effect);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--darker-bg);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.site-logo {
+    height: 45px;
+    width: auto;
+    transition: transform var(--transition-speed);
+}
+
+.site-logo:hover {
+    transform: scale(1.05);
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin-left: 35px;
+}
+
+.navbar nav ul li a {
+    color: var(--light-text);
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 5px 0;
+    position: relative;
+    letter-spacing: 0.5px;
+}
+
+.navbar nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    left: 0;
+    bottom: -5px;
+    transition: width var(--transition-speed);
+}
+
+.navbar nav ul li a:hover::after,
+.navbar nav ul li a.active::after { /* Active link styling */
+    width: 100%;
+}
+
+/* Settings Controls (Language & Theme) */
+.settings-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.select-control {
+    background-color: var(--card-bg);
+    color: var(--light-text);
+    border: 1px solid var(--border-color);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    outline: none;
+    appearance: none; /* Remove default arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="%23${encodeURIComponent(var(--light-text).substring(1))}" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>'); /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+    transition: background-color var(--transition-speed), border-color var(--transition-speed);
+}
+
+.select-control:hover {
+    border-color: var(--primary-color);
+}
+
+.theme-btn {
+    background-color: var(--card-bg);
+    color: var(--light-text);
+    border: 1px solid var(--border-color);
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color var(--transition-speed), border-color var(--transition-speed);
+}
+
+.theme-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--darker-bg);
+}
+
+.theme-btn i {
+    font-size: 1.2rem;
+}
+
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: all var(--transition-speed);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: var(--darker-bg);
+}
+
+.primary-btn:hover {
+    background-color: var(--hover-effect);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 224, 255, 0.4);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    margin-left: 20px;
+}
+
+.secondary-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--darker-bg);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 224, 255, 0.4);
+}
+
+.small-btn {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+    border-radius: 5px;
+    background-color: var(--card-bg);
+    color: var(--light-text);
+    margin-right: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.small-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--darker-bg);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 224, 255, 0.2);
+}
+
+.small-btn:disabled {
+    background-color: #1a2a47;
+    cursor: not-allowed;
+    color: #55657f;
+    border-color: #1a2a47;
+    box-shadow: none;
+    transform: none;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, var(--dark-bg) 0%, #061121 100%);
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section.small-hero {
+    min-height: 50vh; /* Shorter hero for other pages */
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 20% 80%, rgba(0,224,255,0.08) 0%, rgba(10,25,47,0) 50%),
+                radial-gradient(circle at 80% 20%, rgba(100,255,218,0.08) 0%, rgba(10,25,47,0) 50%);
+    animation: pulseGlow 15s infinite alternate;
+    z-index: 0;
+}
+
+body.light-theme .hero-section::before {
+    background: radial-gradient(circle at 20% 80%, rgba(0,123,255,0.05) 0%, rgba(248,249,250,0) 50%),
+                radial-gradient(circle at 80% 20%, rgba(40,167,69,0.05) 0%, rgba(248,249,250,0) 50%);
+}
+
+@keyframes pulseGlow {
+    from { transform: scale(1); opacity: 1; }
+    to { transform: scale(1.1); opacity: 0.8; }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    animation: fadeInSlideUp 1s ease-out;
+}
+
+@keyframes fadeInSlideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    line-height: 1.2;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 25px rgba(0, 224, 255, 0.4);
+}
+
+body.light-theme .hero-content h2 {
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none; /* No glow in light theme */
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 20px; /* Reduced margin for multiple slogans */
+    color: var(--secondary-color);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.hero-content p:last-of-type { /* Last slogan has more margin */
+    margin-bottom: 50px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+/* Info Section (Homepage specific) */
+.info-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--darker-bg);
+}
+
+.info-section .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.info-card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+}
+
+.info-card i {
+    font-size: 3.5rem;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.info-card h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+}
+
+.info-card .btn {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+}
+
+
+/* Content Sections (Shared across pages) */
+.content-section {
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    background-color: var(--dark-bg); /* Ensure background is set */
+}
+
+.content-section.grey-bg {
+    background-color: var(--darker-bg);
+}
+
+.content-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.2rem;
+    margin-bottom: 25px;
+    color: var(--accent-color);
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.content-section h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 5px;
+    background: var(--primary-color);
+    margin: 15px auto 0;
+    border-radius: 3px;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 60px;
+    color: var(--secondary-color);
+}
+
+/* Game & App Grids */
+.game-grid, .app-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.game-card, .app-card, .contact-card {
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed), border var(--transition-speed);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgba(0, 224, 255, 0.1);
+}
+body.light-theme .game-card, body.light-theme .app-card, body.light-theme .contact-card {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+}
+
+.game-card:hover, .app-card:hover, .contact-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    border-color: var(--primary-color);
+}
+body.light-theme .game-card:hover, body.light-theme .app-card:hover, body.light-theme .contact-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.game-card img, .app-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.game-card h3, .app-card h3 {
+    font-size: 1.8rem;
+    margin: 25px 25px 12px;
+    color: var(--primary-color);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.game-card p, .app-card p {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    padding: 0 25px;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.game-actions, .app-actions {
+    padding: 0 25px 25px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.placeholder-card {
+    background-color: var(--darker-bg);
+    border: 2px dashed var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+}
+body.light-theme .placeholder-card {
+    background-color: var(--light-card-bg);
+    border-color: var(--light-border-color);
+}
+
+.placeholder-card i {
+    font-size: 3.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.placeholder-card h3 {
+    color: var(--light-text);
+    margin-bottom: 12px;
+    font-size: 1.8rem;
+}
+.placeholder-card p {
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
+
+
+/* Footer */
+.footer {
+    background-color: var(--darker-bg);
+    color: var(--secondary-color);
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.95rem;
+    border-top: 1px solid var(--border-color);
+    transition: background-color var(--transition-speed), border-color var(--transition-speed);
+}
+
+.footer .social-links a {
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+    margin: 0 12px;
+    transition: color var(--transition-speed);
+}
+
+.footer .social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Chatbot Widget */
+#chatbot-widget {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 350px;
+    max-height: 450px;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all var(--transition-speed);
+    z-index: 1100;
+    border: 1px solid rgba(100, 255, 218, 0.2);
+}
+body.light-theme #chatbot-widget {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    border: 1px solid var(--border-color);
+}
+
+
+.chatbot-closed {
+    max-height: 60px;
+}
+
+.chatbot-header {
+    background-color: var(--primary-color);
+    color: var(--darker-bg);
+    padding: 15px 20px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+body.light-theme .chatbot-header {
+    color: white; /* Always white text on header in light theme */
+}
+
+
+.chatbot-header i {
+    font-size: 1.5rem;
+}
+
+.chatbot-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    overflow-y: auto;
+    max-height: 350px;
+    background-color: var(--card-bg); /* Ensure body background changes with theme */
+}
+
+#chatbot-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    padding-right: 8px;
+}
+
+.message {
+    background-color: var(--darker-bg);
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: var(--light-text);
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+}
+body.light-theme .message {
+    background-color: var(--light-darker-bg);
+    border: 1px solid var(--light-border-color);
+}
+
+.message.user {
+    background-color: var(--primary-color);
+    align-self: flex-end;
+    margin-left: auto;
+    color: var(--darker-bg); /* User messages always have dark text for contrast */
+    border-bottom-right-radius: 2px;
+}
+body.light-theme .message.user {
+    color: white; /* User messages in light theme still have white text on primary color */
+}
+
+
+.message.bot {
+    background-color: var(--secondary-color);
+    align-self: flex-start;
+    margin-right: auto;
+    border-bottom-left-radius: 2px;
+    color: var(--light-text);
+}
+body.light-theme .message.bot {
+    background-color: #e9ecef; /* Lighter grey for bot in light theme */
+    color: var(--light-text);
+}
+
+.chatbot-body input {
+    width: calc(100% - 55px);
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--darker-bg);
+    color: var(--light-text);
+    font-size: 1rem;
+    margin-right: 8px;
+    outline: none;
+    transition: background-color var(--transition-speed), border-color var(--transition-speed), color var(--transition-speed);
+}
+body.light-theme .chatbot-body input {
+    background-color: var(--light-darker-bg);
+    border-color: var(--light-border-color);
+    color: var(--light-text);
+}
+
+.chatbot-body button {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: var(--darker-bg);
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+}
+body.light-theme .chatbot-body button {
+    color: white; /* Always white text on send button in light theme */
+}
+
+
+.chatbot-body button:hover {
+    background-color: var(--hover-effect);
+}
+
+/* Modal (General) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--dark-bg);
+    margin: auto;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.7);
+    width: 90%;
+    max-width: 700px;
+    position: relative;
+    animation: fadeInScale 0.4s ease-out;
+    border: 2px solid var(--accent-color);
+    transition: background-color var(--transition-speed), border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+body.light-theme .modal-content {
+    background-color: var(--light-darker-bg);
+    border-color: var(--light-border-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.modal-content.large-modal {
+    max-width: 900px; /* Wider modal for game/app details */
+}
+
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.close-button {
+    color: var(--secondary-color);
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: color var(--transition-speed);
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Game/App Details Modal specific styling */
+.game-media-carousel, .app-media-carousel {
+    margin-bottom: 30px;
+}
+
+#gameDetailsMainImage, #appDetailsMainImage {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.carousel-thumb {
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color var(--transition-speed), transform var(--transition-speed);
+}
+
+.carousel-thumb:hover {
+    transform: scale(1.05);
+}
+
+.carousel-thumb.active {
+    border-color: var(--primary-color);
+    box-
