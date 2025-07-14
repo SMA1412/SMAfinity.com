@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="gamesPageTitle">SMAfinity - Games</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dark-theme">
+    <header class="navbar">
+        <div class="container">
+            <div class="logo-container">
+                <a href="index.html">
+                    <img src="assets/images/smafinity_logo.png" alt="SMAfinity Logo" class="site-logo">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" data-translate="navHome">Home</a></li>
+                    <li><a href="games.html" data-translate="navGames">Games</a></li>
+                    <li><a href="apps.html" data-translate="navApps">Apps</a></li>
+                    <li><a href="lab.html" data-translate="navLab">Lab</a></li>
+                    <li><a href="contact.html" data-translate="navContact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="settings-controls">
+                <select id="language-switcher" class="select-control">
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी</option>
+                </select>
+                <button id="theme-switcher" class="theme-btn">
+                    <i class="fas fa-sun"></i>
+                    <i class="fas fa-moon" style="display: none;"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="games-hero" class="hero-section small-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 data-translate="gamesHeroHeading">Our Gaming Universe</h2>
+                    <p data-translate="gamesHeroSlogan">Dive into SMAfinity's immersive and exciting game titles!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="game-list" class="content-section">
+            <div class="container">
+                <h2 data-translate="gamesSectionTitle">Featured Games</h2>
+                <p class="section-description" data-translate="gamesSectionDesc">Explore our current and upcoming game titles. Get ready for an unparalleled gaming experience!</p>
+
+                <div class="game-grid">
+                    <div class="game-card" data-game-id="smacraft">
+                        <img src="assets/images/smacraft_thumb.jpg" alt="SMACRAFT Thumbnail">
+                        <h3 data-translate="smacraftTitle">SMACRAFT</h3>
+                        <p data-translate="smacraftDesc">An open-world survival and building game, where your creativity is the only limit. Explore vast biomes, gather resources, and craft your destiny!</p>
+                        <div class="game-actions">
+                            <button class="btn small-btn download-btn" data-game-id="smacraft-download" data-translate="btnDownload">Download</button>
+                            <button class="btn small-btn view-details-btn" data-game-id="smacraft" data-translate="btnViewDetails">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="game-card" data-game-id="smaroyalbattle">
+                        <img src="assets/images/smaroyal_thumb.jpg" alt="SMA ROYAL BATTLE Thumbnail">
+                        <h3 data-translate="smaroyalTitle">SMA ROYAL BATTLE</h3>
+                        <p data-translate="smaroyalDesc">Jump into the ultimate last-man-standing experience! Intense combat, dynamic zones, and a fight for survival await. Are you ready for the battleground?</p>
+                        <div class="game-actions">
+                            <button class="btn small-btn download-btn" data-game-id="smaroyalbattle-download" data-translate="btnDownload">Download</button>
+                            <button class="btn small-btn view-details-btn" data-game-id="smaroyalbattle" data-translate="btnViewDetails">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="game-card placeholder-card">
+                        <i class="fas fa-plus-circle"></i>
+                        <h3 data-translate="moreGamesTitle">More Games Coming Soon!</h3>
+                        <p data-translate="moreGamesDesc">Our lab is constantly brewing new ideas and worlds for you to explore. Ready to be updated by SMAfinity AI!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p data-translate="footerCopyright">&copy; 2025 SMAfinity. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/smafinity/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@SMAfinity" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="chatbot-widget" class="chatbot-closed">
+        <div class="chatbot-header" onclick="toggleChatbot()">
+            <span data-translate="chatbotHeader">SMAfinity Bot</span>
+            <i class="fas fa-comment-dots"></i>
+        </div>
+        <div class="chatbot-body">
+            <div id="chatbot-messages"></div>
+            <input type="text" id="chatbot-input" placeholder="Type your message..." data-translate-placeholder="chatbotPlaceholder">
+            <button id="chatbot-send-btn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <div id="gameDetailsModal" class="modal">
+        <div class="modal-content large-modal">
+            <span class="close-button">&times;</span>
+            <div class="modal-body">
+                <h2 id="gameDetailsTitle" data-translate="gameDetailsTitleDefault">Game Title</h2>
+                <div class="game-media-carousel">
+                    <img id="gameDetailsMainImage" src="" alt="Game Main Image">
+                    <div class="carousel-nav">
+                        <img class="carousel-thumb active" src="" alt="Thumbnail 1">
+                        <img class="carousel-thumb" src="" alt="Thumbnail 2">
+                        <img class="carousel-thumb" src="" alt="Thumbnail 3">
+                        </div>
+                </div>
+                <p id="gameDetailsDescription" class="modal-description" data-translate="gameDetailsDescriptionDefault">Full description of the game.</p>
+                <div class="modal-actions">
+                    <a id="gameDetailsDownloadBtn" href="#" class="btn primary-btn" data-translate="btnDownloadNow">Download Now</a>
+                    <a id="gameDetailsTrailerBtn" href="#" target="_blank" class="btn secondary-btn" data-translate="btnWatchTrailer">Watch Trailer</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/theme.js"></script>
+    <script>
+        // Game Data (In a real app, this would come from a database/API)
+        const gamesData = {
+            "smacraft": {
+                title: { en: "SMACRAFT", hi: "स्माक्राफ्ट" },
+                description: {
+                    en: "An expansive open-world survival and building game. Unleash your creativity by mining resources, crafting tools, and constructing magnificent structures. Explore diverse biomes, encounter unique creatures, and survive the challenges of the wilderness. SMACRAFT offers endless possibilities for adventure and creation, constantly evolving with new updates and community-driven content. Build your legacy!",
+                    hi: "एक विशाल खुली दुनिया का उत्तरजीविता और निर्माण खेल। संसाधन खनन, उपकरण बनाने और शानदार संरचनाओं का निर्माण करके अपनी रचनात्मकता को उजागर करें। विभिन्न बायोम का अन्वेषण करें, अद्वितीय जीवों का सामना करें, और जंगल की चुनौतियों से बचें। स्माक्राफ्ट रोमांच और निर्माण के लिए अनंत संभावनाएं प्रदान करता है, जो लगातार नए अपडेट और समुदाय-संचालित सामग्री के साथ विकसित हो रहा है। अपनी विरासत का निर्माण करें!"
+                },
+                images: [
+                    "assets/images/smacraft_thumb.jpg",
+                    "https://via.placeholder.com/800x450/00e0ff/0a192f?text=SMACRAFT+Screenshot+1",
+                    "https://via.placeholder.com/800x450/00e0ff/0a192f?text=SMACRAFT+Screenshot+2"
+                ],
+                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ?si=l3iH01j3-R2L8j5Z", // Rickroll for placeholder
+                download: "#" // Placeholder
+            },
+            "smaroyalbattle": {
+                title: { en: "SMA ROYAL BATTLE", hi: "स्मा रॉयल बैटल" },
+                description: {
+                    en: "Prepare for high-octane action in SMA ROYAL BATTLE, the definitive last-man-standing experience. Drop into a massive island, scavenge for weapons and gear, and outwit your opponents in a shrinking battle zone. With fast-paced combat, strategic gameplay, and stunning visuals, every match is a unique adrenaline rush. Will you be the last one standing?",
+                    hi: "स्मा रॉयल बैटल में उच्च-ऑक्टेन कार्रवाई के लिए तैयार रहें, जो निश्चित अंतिम-व्यक्ति-स्थायी अनुभव है। एक विशाल द्वीप पर उतरें, हथियारों और गियर के लिए खोज करें, और सिकुड़ते युद्ध क्षेत्र में अपने विरोधियों को मात दें। तेज़-तरज़ लड़ाई, रणनीतिक गेमप्ले और शानदार दृश्यों के साथ, प्रत्येक मैच एक अद्वितीय एड्रेनालाईन रश है। क्या आप आखिरी खड़े रहेंगे?"
+                },
+                images: [
+                    "assets/images/smaroyal_thumb.jpg",
+                    "https://via.placeholder.com/800x450/64ffda/0a192f?text=SMA+ROYAL+Screenshot+1",
+                    "https://via.placeholder.com/800x450/64ffda/0a192f?text=SMA+ROYAL+Screenshot+2"
+                ],
+                trailer: "https://www.youtube.com/embed/dQw4w9WgXcQ?si=l3iH01j3-R2L8j5Z", // Rickroll for placeholder
+                download: "#" // Placeholder
+            }
+        };
+
+        const gameDetailsModal = document.getElementById('gameDetailsModal');
+        const gameDetailsTitle = document.getElementById('gameDetailsTitle');
+        const gameDetailsMainImage = document.getElementById('gameDetailsMainImage');
+        const gameDetailsDescription = document.getElementById('gameDetailsDescription');
+        const gameDetailsDownloadBtn = document.getElementById('gameDetailsDownloadBtn');
+        const gameDetailsTrailerBtn = document.getElementById('gameDetailsTrailerBtn');
+        const carouselNav = document.querySelector('.carousel-nav');
+        const closeButton = gameDetailsModal.querySelector('.close-button');
+
+        document.querySelectorAll('.view-details-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const gameId = button.dataset.gameId;
+                const game = gamesData[gameId];
+                if (game) {
+                    const currentLang = localStorage.getItem('selectedLanguage') || 'en';
+
+                    gameDetailsTitle.textContent = game.title[currentLang];
+                    gameDetailsDescription.textContent = game.description[currentLang];
+                    gameDetailsDownloadBtn.href = game.download;
+                    gameDetailsTrailerBtn.href = game.trailer;
+
+                    // Populate carousel
+                    carouselNav.innerHTML = ''; // Clear previous thumbnails
+                    game.images.forEach((imgSrc, index) => {
+                        const thumb = document.createElement('img');
+                        thumb.classList.add('carousel-thumb');
+                        if (index === 0) {
+                            thumb.classList.add('active');
+                            gameDetailsMainImage.src = imgSrc; // Set initial main image
+                        }
+                        thumb.src = imgSrc;
+                        thumb.alt = `Screenshot ${index + 1}`;
+                        thumb.addEventListener('click', () => {
+                            gameDetailsMainImage.src = imgSrc;
+                            carouselNav.querySelectorAll('.carousel-thumb').forEach(t => t.classList.remove('active'));
+                            thumb.classList.add('active');
+                        });
+                        carouselNav.appendChild(thumb);
+                    });
+
+                    gameDetailsModal.style.display = 'flex'; // Show modal
+                }
+            });
+        });
+
+        closeButton.addEventListener('click', () => {
+            gameDetailsModal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === gameDetailsModal) {
+                gameDetailsModal.style.display = 'none';
+            }
+        });
+
+        // Handle download buttons
+        document.querySelectorAll('.download-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault(); // Prevent default link behavior if href is '#'
+                const gameId = button.dataset.gameId.replace('-download', '');
+                const game = gamesData[gameId];
+                if (game && game.download !== '#') {
+                    // In a real scenario, initiate download here
+                    alert(`Downloading ${game.title[localStorage.getItem('selectedLanguage') || 'en']}... (Simulation)`);
+                    window.open(game.download, '_blank'); // Open download link
+                } else {
+                    alert(`Download for ${game.title[localStorage.getItem('selectedLanguage') || 'en']} is not available yet. Coming Soon!`);
+                }
+            });
+        });
+    </script>
+</body>
+              </html>
+              
